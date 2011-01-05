@@ -1,0 +1,3 @@
+<% @photographs.each do | photograph | %>
+	<img src="<%= photograph.photo.url(:gallery) %>">
+<% end %>

@@ -1,0 +1,16 @@
+<% form_for @photograph, :html => { :multipart => true } do |f| %>
+  <%= render "shared/error_messages", :target=>@photograph %>
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :description %><br />
+    <%= f.text_area :description %>
+  </p>
+  <p>
+    <%= f.label :photo %><br />
+    <%= f.file_field :photo %>
+  </p>
+  <p><%= f.submit "Submit" %></p>
+<% end %>
