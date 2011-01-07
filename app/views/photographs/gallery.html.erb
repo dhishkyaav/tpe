@@ -1,0 +1,12 @@
+<% 
+if @photographs 
+	@photographs.each { |photograph| 
+%>
+	<%= link_to image_tag(photograph.photo.url(:gallery)), 
+				:action => 'show', 
+				:id => photograph.id 
+	%>
+<% 
+	}
+end
+%>

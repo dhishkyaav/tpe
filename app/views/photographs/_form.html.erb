@@ -12,5 +12,14 @@
     <%= f.label :photo %><br />
     <%= f.file_field :photo %>
   </p>
+	<%=select_tag :predefined_print_size, options_from_collection_for_select(@user_print_variants, :id, :size)%>
+	
+	<%=text_field_tag :price%>
+	<input type="button" id="add" value="add"></input>
+	<div id="blah">
+	<%= f.fields_for :variations_attributes  do |variations_fields| %>
+		<%=%>
+	<%end%>
+	</div>
   <p><%= f.submit "Submit" %></p>
 <% end %>

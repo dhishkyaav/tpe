@@ -50,7 +50,7 @@ Tpe::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  root :to => "users#list"
+  root :to => "photographs#gallery"
 
   # See how all your routes lay out with "rake routes"
 
@@ -61,7 +61,9 @@ Tpe::Application.routes.draw do
   match "logout", :to => "user_sessions#destroy", :as => "logout"
   
   match "registration", :to=>"users#new", :as => "registration"
-  match "gallery", :to=>"users#gallery", :as => "gallery"
+  match "my/portfolio", :to=>"users#portfolio", :as => "portfolio"
+  match "gallery", :to=>"photographs#gallery", :as => "gallery"
+  match "photographs/view", :to=>"photographs#view", :as => "view_photograph"
   
   match "upload", :to=>"photographs#upload", :as=>"upload"
 end

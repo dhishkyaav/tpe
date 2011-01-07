@@ -1,0 +1,7 @@
+<% @photographs.each do | photograph | %>
+	<%= link_to image_tag(photograph.photo.url(:gallery)), 
+		:controller=>'photographs',
+		:action=>'edit',
+		:id=>photograph.id
+	%>
+<% end %>

@@ -43,7 +43,7 @@ class UsersController < ApplicationController
     end
   end
   
-  def gallery
+  def portfolio
     fetch_authenticated_user
     @photographs = @logged_in_user.photographs
   end
